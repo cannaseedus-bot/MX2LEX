@@ -81,6 +81,7 @@ The only real work left right now:
 - README.md (this file)
 - Architectural diagrams (optional, later)
 - One “how it fits” page for future systems
+- Qwen-style model scaffold (`models/qwen-blueprint/`) documented for controlled comparisons
 
 ### 4.2 Naming & Framing
 Make it clear that:
