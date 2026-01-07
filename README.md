@@ -457,3 +457,12 @@ To keep the “model core” swappable while MX2LEX, grammar gates, and orchestr
 > *Replay before trust.*
 
 MX2LEX exists so future AI systems don’t lie to themselves.
+
+---
+
+## Relationship to the ASX design stack
+
+- MX2LEX sits within the broader **ASX design stack** as the lexical–semantic layer, but it is **not bound** to ASX or any single runtime.
+- Treat **ASX as the language family** and **MX2LEX as the first implementation and usage scenario**—it is both a language and a runtime.
+- MX2LEX and ASX each carry the artifacts they need in their own repos; together they contribute to the overall design, but either can stand alone.
+- MX2LEX is **not tied to an npm registry or external packaging**—it is the source itself.

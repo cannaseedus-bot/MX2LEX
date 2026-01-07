@@ -66,6 +66,13 @@ If any of these creep in, MX2LEX stops being trustworthy.
 
 ---
 
+## 3.1 Relationship to the ASX design stack
+
+- ASX is the **language family**; MX2LEX is the **first concrete implementation and runtime**.
+- MX2LEX participates in the ASX design stack but remains **independent**—each repository carries the artifacts it needs while contributing to the shared design.
+- MX2LEX is **self-hosted as the source**, not bound to npm or external packaging registries.
+- Integration work with ASX happens **without coupling the layers**; MX2LEX stays deterministic, non-executing, and layer-pure.
+
 ## 4. Near-Term Focus (Documentation & Positioning)
 
 The only real work left right now:
