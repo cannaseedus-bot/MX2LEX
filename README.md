@@ -144,6 +144,12 @@ Everything else is integration.
 
 ---
 
+## Model scaffold for comparisons
+
+To keep the “model core” swappable while MX2LEX, grammar gates, and orchestration stay fixed, a **Qwen-style scaffold** lives in `models/qwen-blueprint/`. It mirrors the reference file layout (config, tokenizer, vocab, merges, generation defaults) with deterministic placeholders. Drop in real Qwen, DeepSeek, or Janus assets there to compare behaviors without changing the surrounding stack.
+
+---
+
 ## Philosophy
 
 > *Structure before intelligence.*  
@@ -151,4 +157,3 @@ Everything else is integration.
 > *Replay before trust.*
 
 MX2LEX exists so future AI systems don’t lie to themselves.
-
