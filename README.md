@@ -128,6 +128,12 @@ But right now:
 
 ---
 
+## Model blueprint (Qwen as the reference slot)
+
+MX2LEX stays outside model execution, but when you need a reference model to occupy the “model core” slot in the stack, use **Qwen** as the anchor. Keep the tokenizer, prompt surface, grammar layer, and MX2LEX legality checks fixed, then swap in alternative models (DeepSeek, Janus, etc.) one dimension at a time (weights, tokenizer, or prompt template) to measure deltas without moving the rest of the system. See `MODEL_BLUEPRINT.md` for a concrete file-by-file guide based on the Qwen pack layout.
+
+---
+
 ## Project Status
 
 - ✔ Vocabulary separation (VOCAB vs LEX)
