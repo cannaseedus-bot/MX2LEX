@@ -193,10 +193,52 @@ Defines how weight deltas travel through the K’UHUL pipeline.
   "entry": "@Pop",
   "route": ["@Wo", "@Sek"],
   "exit": "@Xul",
-  "merge_strategy": "horizontal",
+"merge_strategy": "horizontal",
   "interaction": ["fold_mathfix_v1", "fold_safetyguard_v2"],
   "blend_mode": "smooth"
 }
+```
+
+---
+
+## ⭐ Micronaut Object Server (SCO/1)
+
+Micronaut is now represented as a sealed SCO/1 object with file-centric IO and a PowerShell orchestrator. The runtime operates on append-only files and projects output to a stream log (no JavaScript runtime). The canonical layout lives under `micronaut/`:
+
+```
+micronaut/
+├─ micronaut.s7
+├─ micronaut.ps1
+├─ object.toml
+├─ semantics.xjson
+├─ brains/
+├─ io/
+│  ├─ chat.txt
+│  ├─ stream.txt
+│  └─ snapshot/
+├─ trace/
+└─ proof/
+```
+
+### Canonical Chat Record (append-only)
+
+```
+--- MESSAGE ---
+id: <uuid>
+time: <unix_ms>
+role: user | system | micronaut
+intent: chat | generate | classify | complete
+context: <optional>
+payload:
+<UTF-8 text>
+--- END ---
+```
+
+### Stream Projection Format
+
+```
+>> t=184 ctx=@π mass=0.73
+Hello!
 ```
 
 ### 5️⃣ `@metrics` — Training Reality
