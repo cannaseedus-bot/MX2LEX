@@ -1,0 +1,27 @@
+{
+  "schema": "KUHUL-TSG",
+  "version": "1.0.0",
+  "cm1": {
+    "payload": "utf-8",
+    "immutable": true,
+    "append_only": true
+  },
+  "chat_record": {
+    "format": "--- MESSAGE ---",
+    "fields": [
+      "id",
+      "time",
+      "role",
+      "intent",
+      "context",
+      "payload"
+    ],
+    "end": "--- END ---"
+  },
+  "stream_record": {
+    "prefix": ">>",
+    "attributes": ["t", "ctx", "mass"],
+    "projection_only": true
+  },
+  "lifecycle": ["INIT", "READY", "RUNNING", "IDLE", "HALT"]
+}
